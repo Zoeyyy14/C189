@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Car Simulation</title>
+
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+ <a-scene id="scene">
+     <a-assets id="city" src="./assets/low_poly_city/scene.gltf"></a-assets>
+     <a-entity id="citySet" gltf-model="#city" position="10 -1 -250" rotation="0 90 0" scale="2.5 2.5 2.5"></a-entity>
+
+     <a-box id="b1" material="height:400;metalness:0.34" color="red" geometry="depth:400;height:25;width:1000" position="-720 -8 -70"></a-box>
+     <a-box id="b2" material="height:400;metalness:0.34" color="red" geometry="depth:400;height:25;width:820" position="580 -1 -70"></a-box>
+     <a-box id="b3" material="height:400;metalness:0.34" color="red" geometry="depth:400,height:25;width:800" position="-5 -24 10"></a-box>
+     <!-- <a-box id="b4" material="height:400;metalness:0.34" color="red" geometry="depth:400;height:30;width:300" position="-250 -8 70"></a-box> --> -->
+      <a-assets id="wheel" src="./assets/steering_wheel/scene.gltf"></a-assets>
+     <a-entity id="camera" camera-position="0 1.6 0" rotation="0 0 0">
+     <a-entity id="wheelSet" gltf-model="#wheel" position="-1 -1 -10" rotation="0 0 0" scale="0.05 0.05 0.05">
+     </a-entity>
+     <a-box id="control-break" src="./assets/break.png" color="gray" position="-3 -1 -10" rotation="0 0 0" scale="0.6 1.5 0.6"></a-box>
+     <a-box id="control-acc" src="./assets/acc.png" color="gray" position="1 -1 -10" rotation="0 0 0" scale="0.6 1.5 0.6"></a-box>
+    </a-entity>
+ </a-scene>
+</body>
+</html>
